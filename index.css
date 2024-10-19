@@ -1,3 +1,25 @@
-#heading{
-    color: red;
+.header {
+    display: flex;
+    justify-content: space-between;    /* to give space between logo and nav-items-container.*/
+    border: 1px solid black;
 }
+
+.logo {
+    width: 100px;
+}
+
+.nav-items {
+    padding: 0px 30px;
+}
+
+.nav-items > ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-items > ul > li {
+    font-size:  25px;
+    padding: 10px;
+    margin: 10px;
+}
+

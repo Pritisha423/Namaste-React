@@ -1,48 +1,62 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// Component
-const Title = () => {
+/**
+ * Header
+ *  - Logo
+ *  - Nav Items
+ * Body
+ *  - Search
+ *  - ResturantContainer
+ *    - ResturantCard
+ * Footer
+ *  - Copyright
+ *  - Links
+ *  - Address
+ *  - Contact
+ */
+const Header = () => {
   return (
-    <h1 className="head" tabIndex="5">
-      Namaste React with JSX🚀
-    </h1>
+    <div className="header">
+      <div className="logo-container">
+        <img
+          className="logo"
+          src="https://img.freepik.com/premium-vector/beautiful-unique-logo-design-food-restaurant-company_1314480-8381.jpg"
+        />
+      </div>
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Cart</li>
+        </ul>
+      </div>
+    </div>
   );
 };
-const elem = <span> React Element</span>
 
-const heading = ( 
-    <h1 className = "head" tabIndex="5"> 
-        {elem}
-        Namaste React with JSX🚀
-    </h1>
-);
-const number = 1000;
+const Body = () => {
+  return (
+    <div className = "body">
+        <div className = "search"></div>
+        <div className = "res-container">
+            //ResturantCard
+        </div>
 
-//Functional Component || Component Composition
-const HeadingComponent2 = () => (
-  <div id="container">
-    <h1>{number}</h1>
-    {100+250}
-    {console.log("kgjhgkjh")}
-    {heading}     
-    <h1> Namaste React Functional Component. </h1>
-  </div>
-);
-//cross site scripting
-const data = api.getData();  // If  this api passes malacious data to it jsx will scape it.
+    </div>
+  );
+};
 
-const heading2 = ( 
-    <h1 className = "head" tabIndex="5"> 
-        {data} 
-        <Title></Title>
-        <Title />
-        {Title()} 
-        {elem}
-        Namaste React with JSX🚀
-        <HeadingComponent2 />
-    </h1>
-);
+const AppLayout = () => {
+  return (
+    <div className="app">
+      <Header />
+      <Body />
+      // Footer
+    </div>
+  );
+};
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<HeadingComponent2 />); //For rendering a functional component.
+root.render(<AppLayout />);
