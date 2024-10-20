@@ -20,3 +20,23 @@ Some bundler names like parcel , web pack , vite,
 - parceljs.org 
 - Tree Shaking 
 - Different dev and prod bundles
+
+
+/**
+ * Header
+ *  - Logo
+ *  - Nav Items
+ * Body
+ *  - Search
+ *  - ResturantContainer
+ *    - ResturantCard
+ *      - Img , Name of Res , cuisine , Star Rating, delivery time
+ * Footer
+ *  - Copyright
+ *  - Links
+ *  - Address
+ *  - Contact
+ */
+
+
+ 
